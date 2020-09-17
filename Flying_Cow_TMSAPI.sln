@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flying_Cow_TMSAPI", "Flying_Cow_TMSAPI.csproj", "{78BCEAB9-9BFF-4228-B5DD-9E356423C940}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flying_Cow_TMSMVC", "..\Flying_Cow_TMSMVC\Flying_Cow_TMSMVC.csproj", "{77EC784B-6AAE-4A75-8699-2B6B56358782}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{78BCEAB9-9BFF-4228-B5DD-9E356423C940}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78BCEAB9-9BFF-4228-B5DD-9E356423C940}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78BCEAB9-9BFF-4228-B5DD-9E356423C940}.Release|Any CPU.Build.0 = Release|Any CPU
-		{77EC784B-6AAE-4A75-8699-2B6B56358782}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{77EC784B-6AAE-4A75-8699-2B6B56358782}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{77EC784B-6AAE-4A75-8699-2B6B56358782}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{77EC784B-6AAE-4A75-8699-2B6B56358782}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
