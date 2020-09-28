@@ -45,8 +45,8 @@ namespace Flying_Cow_TMSAPI.Model
         /// </summary>
         public string if_EndPlace { get; set; }
         /// <summary>
-        /// 状态
-        /// </summary>
+        /// 询价单状态   0、1、2、3   待报价    4:已报价     5:已拒绝
+        /// </summary> 
         public int if_State { get; set; }
         /// <summary>
         /// 备注

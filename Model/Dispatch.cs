@@ -21,7 +21,7 @@ namespace Flying_Cow_TMSAPI.Model
         /// <summary>
         /// 与运输方进行关联
         /// </summary>
-        public int transportid { get; set; }
+        public string transportid { get; set; }
         /// <summary>
         /// 与订单表进行关联
         /// </summary>

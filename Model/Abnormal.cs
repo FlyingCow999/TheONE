@@ -37,7 +37,7 @@ namespace Flying_Cow_TMSAPI.Model
         /// <summary>
         /// 签收状态
         /// </summary>
-        public string a_Status { get; set; }
+        public int a_Status { get; set; }
         /// <summary>
         /// 图片
         /// </summary>
@@ -49,10 +49,14 @@ namespace Flying_Cow_TMSAPI.Model
         /// <summary>
         /// 卸货外键
         /// </summary>
-        public string receiptid { get; set; }
+        public int receiptid { get; set; }
         /// <summary>
         /// 订单外键
         /// </summary>
-        public string ifid { get; set; }
+        public int coid { get; set; }
+        /// <summary>
+        /// 客户对回单的状态
+        /// </summary>
+        public int a_State { get; set; }
     }
 }

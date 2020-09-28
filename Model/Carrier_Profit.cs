@@ -34,7 +34,7 @@ namespace Flying_Cow_TMSAPI.Model
         /// <summary>
         /// 货物表外键
         /// </summary>
-        public int ciid { get; set; }
+        public int oid { get; set; }
 
     }
 }

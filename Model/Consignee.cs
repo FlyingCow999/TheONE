@@ -36,7 +36,7 @@ namespace Flying_Cow_TMSAPI.Model
         /// </summary>
         public int eid { get; set; }
         /// <summary>
-        /// 订单状态
+        /// 订单状态   0：待接单      1：已接单       2：已完成  
         /// </summary>
         public int co_State { get; set; }
     }

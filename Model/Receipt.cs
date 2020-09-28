@@ -22,7 +22,7 @@ namespace Flying_Cow_TMSAPI.Model
         /// <summary>
         /// 订单号
         /// </summary>
-        public string r_Order { get; set; }
+        public int r_Order { get; set; }
         /// <summary>
         /// 货名
         /// </summary>

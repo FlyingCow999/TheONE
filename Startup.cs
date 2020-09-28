@@ -36,7 +36,7 @@ namespace Flying_Cow_TMSAPI
             {
                 s.AddPolicy("cors", p =>
                 {
-                    p.WithOrigins("http://localhost:54310")
+                    p.WithOrigins("http://localhost:52767")
                     .AllowAnyHeader()
                     .AllowAnyMethod()
                     .AllowCredentials();//指定处理cookie

@@ -39,7 +39,7 @@ namespace Flying_Cow_TMSAPI.Model
         /// <summary>
         /// 车辆状态
         /// </summary>
-        public int o_State { get; set; }
+        public string o_State { get; set; }
         /// <summary>
         /// 单价
         /// </summary>
@@ -76,5 +76,6 @@ namespace Flying_Cow_TMSAPI.Model
         /// 货物表外键
         /// </summary>
         public int ciid { get; set; }
+        public string o_branch { get; set; }
     }
 }
