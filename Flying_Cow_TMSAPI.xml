@@ -1,0 +1,1026 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Flying_Cow_TMSAPI</name>
+    </assembly>
+    <members>
+        <member name="M:Flying_Cow_TMSAPI.Controllers.Inquiry_MController.GetInquiryList(System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            显示询价单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Flying_Cow_TMSAPI.Controllers.Inquiry_MController.GetXiangQing(System.Int32)">
+            <summary>
+            审核页面
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flying_Cow_TMSAPI.Controllers.Inquiry_MController.ShenHeById(System.Int32)">
+            <summary>
+            审核（修改状态为1）
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flying_Cow_TMSAPI.Controllers.Inquiry_MController.RefuseById(System.Int32)">
+            <summary>
+            拒绝(修改状态为5)
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flying_Cow_TMSAPI.Controllers.Inquiry_MController.OfferById(System.String,System.String,System.String,System.String)">
+            <summary>
+            司机询价列表(查询询价Id为0，没有报价的数据)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Flying_Cow_TMSAPI.Controllers.Inquiry_MController.CommitOffer(System.Int32,System.String)">
+            <summary>
+            添加司机报价
+            </summary>
+            <param name="id"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flying_Cow_TMSAPI.Controllers.Inquiry_MController.Inquire_driver_Offer(System.Int32)">
+            <summary>
+            查询司机的报价信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flying_Cow_TMSAPI.Controllers.Inquiry_MController.Add_Profits(Flying_Cow_TMSAPI.Model.Carrier_Profit)">
+            <summary>
+            添加利润，完成报价
+            </summary>
+            <param name="cp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flying_Cow_TMSAPI.Controllers.Inquiry_MController.FinishById(System.Int32)">
+            <summary>
+            完成报价(修改状态为4)
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flying_Cow_TMSAPI.Controllers.Inquiry_MController.GetStateCount">
+            <summary>
+            显示不同状态的个数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Flying_Cow_TMSAPI.Controllers.Inquiry_MController.XiangQ(System.Int32)">
+            <summary>
+            详情页
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flying_Cow_TMSAPI.Controllers.Trace_MController.GetTracePageList(System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.Int32,System.Int32)">
+            <summary>
+            显示跟踪列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Flying_Cow_TMSAPI.Controllers.Trace_MController.XiangQX(System.Int32)">
+            <summary>
+            详情页
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flying_Cow_TMSAPI.Controllers.Trace_MController.XiangQ(System.Int32)">
+            <summary>
+            LayUI详情页
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flying_Cow_TMSAPI.Controllers.Trace_MController.RouteAdd(System.Int32)">
+            <summary>
+            在途跟踪途经站点
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flying_Cow_TMSAPI.Controllers.Trace_MController.GetImg">
+            <summary>
+            获取图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Abnormal.a_Abnormal">
+            <summary>
+            异常状态
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Abnormal.a_Explain">
+            <summary>
+            异常说明
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Abnormal.a_Signer">
+            <summary>
+            签收人
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Abnormal.a_Signing">
+            <summary>
+            签收时间 
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Abnormal.a_Status">
+            <summary>
+            签收状态
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Abnormal.a_Picture">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Abnormal.a_Remarks">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Abnormal.receiptid">
+            <summary>
+            卸货外键
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Abnormal.coid">
+            <summary>
+            收货表外键
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Address.a_Time">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Address.a_Site">
+            <summary>
+            详细地址
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Address.ifid">
+            <summary>
+            询价单外键
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Anomaly.aid">
+            <summary>
+            回单表外键
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Anomaly.ano_processing">
+            <summary>
+            解决方案
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Carrier_Profit.cp_Profit">
+            <summary>
+            利润
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Carrier_Profit.cp_ElseCost">
+            <summary>
+            其他费用
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Carrier_Profit.cp_EndTime">
+            <summary>
+            报价有效截止日期
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Carrier_Profit.cp_Aggregate">
+            <summary>
+            总计
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Carrier_Profit.oid">
+            <summary>
+            司机表外键
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Consignee.co_Company">
+            <summary>
+            收货方
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Consignee.co_Person">
+            <summary>
+            收货人
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Consignee.co_Phone">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Consignee.co_Address">
+            <summary>
+            收货地址
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Consignee.eid">
+            <summary>
+            委托表外键
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Consignee.co_State">
+            <summary>
+            订单状态
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Dispatch.transportid">
+            <summary>
+            与运输方进行关联
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Dispatch.orderid">
+            <summary>
+            与订单表进行关联
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Dispatch.dis_State">
+            <summary>
+            判断该订单是否调度
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Driver_Quotation.ifid">
+            <summary>
+            询价表外键
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Driver_Quotation.oid">
+            <summary>
+            报价表外键
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Entrust.e_Company">
+            <summary>
+            委托方
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Entrust.e_Person">
+            <summary>
+            委托人
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Entrust.e_Phone">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Entrust.e_Address">
+            <summary>
+            提货地址
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Entrust.e_AddPerson">
+            <summary>
+            提货联系人
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Entrust.e_AddPhone">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Entrust.ifid">
+            <summary>
+            询价表外键
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Inquiry.if_Number">
+            <summary>
+            询价号
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Inquiry.if_OrderTime">
+            <summary>
+            下单时间
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Inquiry.if_PlanBCarTime">
+            <summary>
+            计划发车时间
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Inquiry.if_PlanArrivalTime">
+            <summary>
+            计划到达时间
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Inquiry.if_BCarTime">
+            <summary>
+            实际发车时间
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Inquiry.if_BeginPlace">
+            <summary>
+            始发地
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Inquiry.if_EndPlace">
+            <summary>
+            目的地
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Inquiry.if_State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Inquiry.if_Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Inquiry.if_Specification">
+            <summary>
+            规格型号
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Inquiry.if_TotalPackage">
+            <summary>
+            总包装
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Inquiry.if_Num">
+            <summary>
+            总数量
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Inquiry.if_AllWeight">
+            <summary>
+            总重量
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Inquiry.if_Goods">
+            <summary>
+            货名
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.InquiryViewModel.if_Number">
+            <summary>
+            询价号
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.InquiryViewModel.if_OrderTime">
+            <summary>
+            下单时间
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.InquiryViewModel.if_PlanBCarTime">
+            <summary>
+            计划发车时间
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.InquiryViewModel.if_PlanArrivalTime">
+            <summary>
+            计划到达时间
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.InquiryViewModel.if_BCarTime">
+            <summary>
+            实际发车时间
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.InquiryViewModel.if_BeginPlace">
+            <summary>
+            始发地
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.InquiryViewModel.if_EndPlace">
+            <summary>
+            目的地
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.InquiryViewModel.if_State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.InquiryViewModel.if_Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.InquiryViewModel.if_Specification">
+            <summary>
+            规格型号
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.InquiryViewModel.if_TotalPackage">
+            <summary>
+            总包装
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.InquiryViewModel.if_Num">
+            <summary>
+            总数量
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.InquiryViewModel.if_AllWeight">
+            <summary>
+            总重量
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.InquiryViewModel.if_Goods">
+            <summary>
+            货名
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.InquiryViewModel.e_Company">
+            <summary>
+            委托方
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.InquiryViewModel.e_Person">
+            <summary>
+            委托人
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.InquiryViewModel.e_Phone">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.InquiryViewModel.e_Address">
+            <summary>
+            提货地址
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.InquiryViewModel.e_AddPerson">
+            <summary>
+            提货联系人
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.InquiryViewModel.e_AddPhone">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.InquiryViewModel.ifid">
+            <summary>
+            询价表外键
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Jurisdiction.juris_MenuName">
+            <summary>
+            权限菜单名称
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Jurisdiction.juris_Pid">
+            <summary>
+            父类ID
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Offer.o_Driver">
+            <summary>
+            司机姓名
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Offer.o_Nature">
+            <summary>
+            车辆性质
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Offer.o_Row">
+            <summary>
+            车牌号
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Offer.o_Type">
+            <summary>
+            车型
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Offer.o_CarSpec">
+            <summary>
+            车辆规格
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Offer.o_State">
+            <summary>
+            车辆状态
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Offer.o_Price">
+            <summary>
+            单价
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Offer.o_Capacity">
+            <summary>
+            载量
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Offer.o_Starting">
+            <summary>
+            发站
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Offer.o_Station">
+            <summary>
+            到站
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Offer.o_Rated">
+            <summary>
+            额定载量
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Offer.o_Freight">
+            <summary>
+            运输费合计
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Offer.o_Other">
+            <summary>
+            其他费用
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Offer.o_branch">
+            <summary>
+            网点
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Offer.o_TotalPrice">
+            <summary>
+            总费用
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Offer.ciid">
+            <summary>
+            货物表外键
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Receipt.r_Order">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Receipt.r_Article">
+            <summary>
+            货名
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Receipt.r_Spec">
+            <summary>
+            规格型号
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Receipt.r_Number">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Receipt.r_Weight">
+            <summary>
+            重量
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Role.role_Name">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Role.role_Remark">
+            <summary>
+            角色权限
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.RoleJurisdiction.roleid">
+            <summary>
+            角色表外键
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.RoleJurisdiction.jurisid">
+            <summary>
+            权限表外键
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Route.r_Pass">
+            <summary>
+            途中站
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Route.ifid">
+            <summary>
+            订单表外键
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Route.r_Time">
+            <summary>
+            到达时间
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Takegoods.t_Order">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Takegoods.t_Article">
+            <summary>
+            货名
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Takegoods.t_Spec">
+            <summary>
+            规格型号
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Takegoods.t_Number">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Takegoods.t_Weight">
+            <summary>
+            总重量
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Takegoods.t_Volume">
+            <summary>
+            体积
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Takegoods.t_Starting">
+            <summary>
+            始发
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Takegoods.t_Origin">
+            <summary>
+            始发地址
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Takegoods.t_Station">
+            <summary>
+            到站
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Takegoods.t_Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Takegoods.t_Picture">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Takegoods.t_Signing">
+            <summary>
+            签收时间 
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.Takegoods.oid">
+            <summary>
+            报价表外键
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.UserInfo.user_Name">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.UserInfo.user_Phone">
+            <summary>
+            用户电话
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.UserRole.userid">
+            <summary>
+            用户表外键
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Model.UserRole.roleid">
+            <summary>
+            角色表外键
+            </summary>
+        </member>
+        <member name="T:Flying_Cow_TMSAPI.Virtual_Model.GetInquiryPageList">
+            <summary>
+            询价单分页
+            </summary>
+        </member>
+        <member name="T:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel">
+            <summary>
+            跟踪列表
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.o_Row">
+            <summary>
+            车牌号
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.if_Number">
+            <summary>
+            询价号
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.if_OrderTime">
+            <summary>
+            下单时间
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.if_PlanBCarTime">
+            <summary>
+            计划发车时间
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.if_PlanArrivalTime">
+            <summary>
+            计划到达时间
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.if_BCarTime">
+            <summary>
+            实际发车时间
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.if_BeginPlace">
+            <summary>
+            始发地
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.if_EndPlace">
+            <summary>
+            目的地
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.if_State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.if_Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.if_Specification">
+            <summary>
+            规格型号
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.if_TotalPackage">
+            <summary>
+            总包装
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.if_Num">
+            <summary>
+            总数量
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.if_AllWeight">
+            <summary>
+            总重量
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.if_Goods">
+            <summary>
+            货名
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.e_Company">
+            <summary>
+            委托方
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.e_Person">
+            <summary>
+            委托人
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.e_Phone">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.e_Address">
+            <summary>
+            提货地址
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.e_AddPerson">
+            <summary>
+            提货联系人
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.e_AddPhone">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.ifid">
+            <summary>
+            询价表外键
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.co_Company">
+            <summary>
+            收货方
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.co_Person">
+            <summary>
+            收货人
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.co_Phone">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.co_Address">
+            <summary>
+            收货地址
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.eid">
+            <summary>
+            委托表外键
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.GetTraceModel.co_State">
+            <summary>
+            订单状态
+            </summary>
+        </member>
+        <member name="T:Flying_Cow_TMSAPI.Virtual_Model.GetTracePageList">
+            <summary>
+            跟踪分页表
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.if_Number">
+            <summary>
+            询价号
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.if_OrderTime">
+            <summary>
+            下单时间
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.if_PlanBCarTime">
+            <summary>
+            计划发车时间
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.if_PlanArrivalTime">
+            <summary>
+            计划到达时间
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.if_BCarTime">
+            <summary>
+            实际发车时间
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.if_BeginPlace">
+            <summary>
+            始发地
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.if_EndPlace">
+            <summary>
+            目的地
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.if_State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.if_Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.if_Specification">
+            <summary>
+            规格型号
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.if_TotalPackage">
+            <summary>
+            总包装
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.if_Num">
+            <summary>
+            总数量
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.if_AllWeight">
+            <summary>
+            总重量
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.if_Goods">
+            <summary>
+            货名
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.ifid">
+            <summary>
+            询价表外键
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.oid">
+            <summary>
+            报价表外键
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.o_Driver">
+            <summary>
+            司机姓名
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.o_Nature">
+            <summary>
+            车辆性质
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.o_Row">
+            <summary>
+            车牌号
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.o_Type">
+            <summary>
+            车型
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.o_CarSpec">
+            <summary>
+            车辆规格
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.o_State">
+            <summary>
+            车辆状态
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.o_Price">
+            <summary>
+            单价
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.o_Capacity">
+            <summary>
+            载量
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.o_Starting">
+            <summary>
+            发站
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.o_Station">
+            <summary>
+            到站
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.o_Rated">
+            <summary>
+            额定载量
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.o_Freight">
+            <summary>
+            运输费合计
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.o_Other">
+            <summary>
+            其他费用
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.o_branch">
+            <summary>
+            网点
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.o_TotalPrice">
+            <summary>
+            总费用
+            </summary>
+        </member>
+        <member name="P:Flying_Cow_TMSAPI.Virtual_Model.Inquire_driver_OfferModel.ciid">
+            <summary>
+            货物表外键
+            </summary>
+        </member>
+    </members>
+</doc>
