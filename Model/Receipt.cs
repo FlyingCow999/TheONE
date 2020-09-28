@@ -39,9 +39,5 @@ namespace Flying_Cow_TMSAPI.Model
         /// 重量
         /// </summary>
         public int r_Weight { get; set; }
-        /// <summary>
-        /// 体积
-        /// </summary>
-        public string r_Volume { get; set; }
     }
 }

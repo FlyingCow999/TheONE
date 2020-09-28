@@ -34,5 +34,6 @@ namespace Flying_Cow_TMSAPI.Model
         public virtual DbSet<Takegoods> Takegoods { get; set; }
         public virtual DbSet<UserInfo> UserInfo { get; set; }
         public virtual DbSet<UserRole> UserRole { get; set; }
+        public virtual DbSet<Img> Img { get; set; }
     }
 }

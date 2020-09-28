@@ -47,11 +47,11 @@ namespace Flying_Cow_TMSAPI.Migrations
                     b.Property<string>("a_Status")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ifid")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("coid")
+                        .HasColumnType("int");
 
-                    b.Property<string>("receiptid")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("receiptid")
+                        .HasColumnType("int");
 
                     b.HasKey("a_Id");
 
@@ -104,9 +104,6 @@ namespace Flying_Cow_TMSAPI.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("ciid")
-                        .HasColumnType("int");
-
                     b.Property<float>("cp_Aggregate")
                         .HasColumnType("real");
 
@@ -118,6 +115,9 @@ namespace Flying_Cow_TMSAPI.Migrations
 
                     b.Property<float>("cp_Profit")
                         .HasColumnType("real");
+
+                    b.Property<int>("oid")
+                        .HasColumnType("int");
 
                     b.HasKey("cp_Id");
 
@@ -224,6 +224,21 @@ namespace Flying_Cow_TMSAPI.Migrations
                     b.HasKey("e_Id");
 
                     b.ToTable("Entrust");
+                });
+
+            modelBuilder.Entity("Flying_Cow_TMSAPI.Model.Img", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Url")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Img");
                 });
 
             modelBuilder.Entity("Flying_Cow_TMSAPI.Model.Inquiry", b =>
@@ -338,8 +353,8 @@ namespace Flying_Cow_TMSAPI.Migrations
                     b.Property<string>("o_Starting")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("o_State")
-                        .HasColumnType("int");
+                    b.Property<string>("o_State")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("o_Station")
                         .HasColumnType("nvarchar(max)");
@@ -348,6 +363,9 @@ namespace Flying_Cow_TMSAPI.Migrations
                         .HasColumnType("real");
 
                     b.Property<string>("o_Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("o_branch")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("o_Id");
@@ -372,9 +390,6 @@ namespace Flying_Cow_TMSAPI.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("r_Spec")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("r_Volume")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("r_Weight")

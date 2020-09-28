@@ -30,6 +30,6 @@ namespace Flying_Cow_TMSAPI.Model
         /// <summary>
         /// 到达时间
         /// </summary>
-        public DateTime r_Time { get; set; }
+        public DateTime r_Time { get; set; } 
     }
 }

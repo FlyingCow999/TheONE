@@ -32,7 +32,7 @@ namespace Flying_Cow_TMSAPI.Model
         /// </summary>
         public float cp_Aggregate { get; set; }
         /// <summary>
-        /// 货物表外键
+        /// 司机表外键
         /// </summary>
         public int oid { get; set; }
 

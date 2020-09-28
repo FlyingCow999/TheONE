@@ -69,6 +69,10 @@ namespace Flying_Cow_TMSAPI.Model
         /// </summary>
         public float o_Other { get; set; }
         /// <summary>
+        /// 网点
+        /// </summary>
+        public string o_branch { get; set; }
+        /// <summary>
         /// 总费用
         /// </summary>
         public float o_TotalPrice { get; set; }
