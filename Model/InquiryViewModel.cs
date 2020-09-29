@@ -117,5 +117,16 @@ namespace Flying_Cow_TMSAPI.Model
         /// 订单状态   0：待接单      1：已接单       2：已完成  
         /// </summary>
         public int co_State { get; set; }
+        public string ZT { get; set; }
+        public int co_Id { get; set; }
+        public int quanbu { get; set; }
+        public int ybj { get; set; }
+        public int wbj { get; set; }
+        public int gq { get; set; }
+        public int y { get; set; }
+        public int jj { get; set; }
+        public int yjd { get; set; }
+        public int djjd { get; set; }
+        public int qb { get; set; }
     }
 }

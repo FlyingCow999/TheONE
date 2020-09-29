@@ -34,10 +34,10 @@ namespace Flying_Cow_TMSAPI.Controllers
                         select new InquiryViewModel()
                         {
                             if_Number = A.if_Number,
-                            if_OrderTime = A.if_OrderTime,
+                            if_OrderTime = A.if_OrderTime.ToString("yyyy-MM-dd HH:mm:ss"),
                             e_Company = B.e_Company,
-                            if_PlanBCarTime = A.if_PlanBCarTime,
-                            if_PlanArrivalTime = A.if_PlanArrivalTime,
+                            if_PlanBCarTime = A.if_PlanBCarTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                            if_PlanArrivalTime = A.if_PlanArrivalTime.ToString("yyyy-MM-dd HH:mm:ss"),
                             if_BeginPlace = A.if_BeginPlace,
                             if_EndPlace = A.if_EndPlace,
                             if_Goods = A.if_Goods,
@@ -58,10 +58,10 @@ namespace Flying_Cow_TMSAPI.Controllers
                         select new InquiryViewModel()
                         {
                             if_Number = A.if_Number,
-                            if_OrderTime = A.if_OrderTime,
+                            if_OrderTime = A.if_OrderTime.ToString("yyyy-MM-dd HH:mm:ss"),
                             e_Company = B.e_Company,
-                            if_PlanBCarTime = A.if_PlanBCarTime,
-                            if_PlanArrivalTime = A.if_PlanArrivalTime,
+                            if_PlanBCarTime = A.if_PlanBCarTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                            if_PlanArrivalTime = A.if_PlanArrivalTime.ToString("yyyy-MM-dd HH:mm:ss"),
                             if_BeginPlace = A.if_BeginPlace,
                             if_EndPlace = A.if_EndPlace,
                             if_Goods = A.if_Goods,
@@ -135,10 +135,10 @@ namespace Flying_Cow_TMSAPI.Controllers
                         select new InquiryViewModel()
                         {
                             if_Number = A.if_Number,
-                            if_OrderTime = A.if_OrderTime,
+                            if_OrderTime = A.if_OrderTime.ToString("yyyy-MM-dd HH:mm:ss"),
                             e_Company = B.e_Company,
-                            if_PlanBCarTime = A.if_PlanBCarTime,
-                            if_PlanArrivalTime = A.if_PlanArrivalTime,
+                            if_PlanBCarTime = A.if_PlanBCarTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                            if_PlanArrivalTime = A.if_PlanArrivalTime.ToString("yyyy-MM-dd HH:mm:ss"),
                             if_BeginPlace = A.if_BeginPlace,
                             if_EndPlace = A.if_EndPlace,
                             if_Goods = A.if_Goods,
@@ -183,10 +183,10 @@ namespace Flying_Cow_TMSAPI.Controllers
                         select new InquiryViewModel()
                         {
                             if_Number = A.if_Number,
-                            if_OrderTime = A.if_OrderTime,
+                            if_OrderTime = A.if_OrderTime.ToString("yyyy-MM-dd HH:mm:ss"),
                             e_Company = B.e_Company,
-                            if_PlanBCarTime = A.if_PlanBCarTime,
-                            if_PlanArrivalTime = A.if_PlanArrivalTime,
+                            if_PlanBCarTime = A.if_PlanBCarTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                            if_PlanArrivalTime = A.if_PlanArrivalTime.ToString("yyyy-MM-dd HH:mm:ss"),
                             if_BeginPlace = A.if_BeginPlace,
                             if_EndPlace = A.if_EndPlace,
                             if_Goods = A.if_Goods,
@@ -228,10 +228,10 @@ namespace Flying_Cow_TMSAPI.Controllers
                         select new InquiryViewModel()
                         {
                             if_Number = A.if_Number,
-                            if_OrderTime = A.if_OrderTime,
+                            if_OrderTime = A.if_OrderTime.ToString("yyyy-MM-dd HH:mm:ss"),
                             e_Company = B.e_Company,
-                            if_PlanBCarTime = A.if_PlanBCarTime,
-                            if_PlanArrivalTime = A.if_PlanArrivalTime,
+                            if_PlanBCarTime = A.if_PlanBCarTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                            if_PlanArrivalTime = A.if_PlanArrivalTime.ToString("yyyy-MM-dd HH:mm:ss"),
                             if_BeginPlace = A.if_BeginPlace,
                             if_EndPlace = A.if_EndPlace,
                             if_Goods = A.if_Goods,
@@ -293,11 +293,11 @@ namespace Flying_Cow_TMSAPI.Controllers
                         select new InquiryViewModel()
                         {
                             if_Number = B.if_Number,
-                            if_OrderTime = B.if_OrderTime,
+                            if_OrderTime = B.if_OrderTime.ToString("yyyy-MM-dd HH:mm:ss"),
                             if_BeginPlace = B.if_BeginPlace,
                             if_EndPlace = B.if_EndPlace,
-                            if_PlanBCarTime = B.if_PlanBCarTime,
-                            if_PlanArrivalTime = B.if_PlanArrivalTime,
+                            if_PlanBCarTime = B.if_PlanBCarTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                            if_PlanArrivalTime = B.if_PlanArrivalTime.ToString("yyyy-MM-dd HH:mm:ss"),
                             if_Goods = B.if_Goods,
                             if_AllWeight = B.if_AllWeight,
                             if_State = B.if_State,
@@ -313,11 +313,11 @@ namespace Flying_Cow_TMSAPI.Controllers
                         select new InquiryViewModel()
                         {
                             if_Number = B.if_Number,
-                            if_OrderTime = B.if_OrderTime,
+                            if_OrderTime = B.if_OrderTime.ToString("yyyy-MM-dd HH:mm:ss"),
                             if_BeginPlace = B.if_BeginPlace,
                             if_EndPlace = B.if_EndPlace,
-                            if_PlanBCarTime = B.if_PlanBCarTime,
-                            if_PlanArrivalTime = B.if_PlanArrivalTime,
+                            if_PlanBCarTime = B.if_PlanBCarTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                            if_PlanArrivalTime = B.if_PlanArrivalTime.ToString("yyyy-MM-dd HH:mm:ss"),
                             if_Goods = B.if_Goods,
                             if_AllWeight = B.if_AllWeight,
                             if_State = B.if_State,
@@ -381,10 +381,10 @@ namespace Flying_Cow_TMSAPI.Controllers
                         select new InquiryViewModel()
                         {
                             if_Number = A.if_Number,
-                            if_OrderTime = A.if_OrderTime,
+                            if_OrderTime = A.if_OrderTime.ToString("yyyy-MM-dd HH:mm:ss"),
                             e_Company = B.e_Company,
-                            if_PlanBCarTime = A.if_PlanBCarTime,
-                            if_PlanArrivalTime = A.if_PlanArrivalTime,
+                            if_PlanBCarTime = A.if_PlanBCarTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                            if_PlanArrivalTime = A.if_PlanArrivalTime.ToString("yyyy-MM-dd HH:mm:ss"),
                             if_BeginPlace = A.if_BeginPlace,
                             if_EndPlace = A.if_EndPlace,
                             if_Goods = A.if_Goods,
@@ -415,10 +415,10 @@ namespace Flying_Cow_TMSAPI.Controllers
                         select new InquiryViewModel()
                         {
                             if_Number = A.if_Number,
-                            if_OrderTime = A.if_OrderTime,
+                            if_OrderTime = A.if_OrderTime.ToString("yyyy-MM-dd HH:mm:ss"),
                             e_Company = B.e_Company,
-                            if_PlanBCarTime = A.if_PlanBCarTime,
-                            if_PlanArrivalTime = A.if_PlanArrivalTime,
+                            if_PlanBCarTime = A.if_PlanBCarTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                            if_PlanArrivalTime = A.if_PlanArrivalTime.ToString("yyyy-MM-dd HH:mm:ss"),
                             if_BeginPlace = A.if_BeginPlace,
                             if_EndPlace = A.if_EndPlace,
                             if_Goods = A.if_Goods,

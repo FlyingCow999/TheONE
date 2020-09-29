@@ -79,7 +79,6 @@ namespace Flying_Cow_TMSAPI.Model
         /// <summary>
         /// 网点
         /// </summary>
-        public string o_branch { get; set; }
         /// <summary>
         /// 货物表外键
         /// </summary>
