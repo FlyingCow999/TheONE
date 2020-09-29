@@ -40,25 +40,9 @@ namespace Flying_Cow_TMSAPI.Model
         /// </summary>
         public float t_Weight { get; set; }
         /// <summary>
-        /// 体积
-        /// </summary>
-        public int t_Volume { get; set; }
-        /// <summary>
-        /// 始发
-        /// </summary>
-        public string t_Starting { get; set; }
-        /// <summary>
         /// 始发地址
         /// </summary>
         public string t_Origin { get; set; }
-        /// <summary>
-        /// 到站
-        /// </summary>
-        public string t_Station { get; set; }
-        /// <summary>
-        /// 地址
-        /// </summary>
-        public string t_Address { get; set; }
         /// <summary>
         /// 图片
         /// </summary>
