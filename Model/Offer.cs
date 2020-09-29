@@ -80,6 +80,5 @@ namespace Flying_Cow_TMSAPI.Model
         /// 货物表外键
         /// </summary>
         public int ciid { get; set; }
-        public string o_branch { get; set; }
     }
 }
