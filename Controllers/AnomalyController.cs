@@ -16,7 +16,6 @@ namespace Flying_Cow_TMSAPI.Controllers
     [ApiController]
     public class AnomalyController : ControllerBase
     {
-
         //依赖注入
         public TMSDBContext db;
         public AnomalyController(TMSDBContext db) { this.db = db; }

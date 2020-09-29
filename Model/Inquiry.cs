@@ -73,4 +73,6 @@ namespace Flying_Cow_TMSAPI.Model
         /// </summary>
         public string if_Goods { get; set; }
     }
+
 }
+
