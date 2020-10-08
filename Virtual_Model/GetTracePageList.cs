@@ -13,6 +13,6 @@ namespace Flying_Cow_TMSAPI.Virtual_Model
         //数据
         public List<GetTraceModel> GetTraceModel { get; set; }
         //总页数
-        public int TotalPage { get; set; }
+        public int allPage { get; set; }
     }
 }
