@@ -14,11 +14,12 @@ namespace Flying_Cow_TMSAPI.Model
     /// </summary>
     public class RoleJurisdiction
     {
+
         [Key]
         /// <summary>
         /// 角色权限表ID
         /// </summary>
-        public int role_Id { get; set; }
+        public int rolej_Id { get; set; }
         /// <summary>
         /// 角色表外键
         /// </summary>

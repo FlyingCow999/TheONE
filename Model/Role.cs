@@ -26,6 +26,8 @@ namespace Flying_Cow_TMSAPI.Model
         /// <summary>
         /// 角色权限
         /// </summary>
-        public string role_Remark { get; set; }
+        public string role_gRemark { get; set; }
+        
+        
     }
 }

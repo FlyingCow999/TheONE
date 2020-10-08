@@ -26,6 +26,11 @@ namespace Flying_Cow_TMSAPI.Model
         /// <summary>
         /// 父类ID
         /// </summary>
-        public string juris_Pid { get; set; }
+        public int juris_Pid { get; set; }
+        /// <summary>
+        /// 路径
+        /// </summary>
+        public string juris_MenuUrl { get; set; }
+
     }
 }
