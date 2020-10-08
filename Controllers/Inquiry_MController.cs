@@ -45,7 +45,7 @@ namespace Flying_Cow_TMSAPI.Controllers
                              if_PlanBCarTime=s.if_PlanBCarTime.ToString("yyyy-MM-dd HH:mm:ss"),
                              if_Remark=s.if_Remark,
                              if_TotalPackage=s.if_TotalPackage
-                              }).ToListAsync();
+                              }).OrderByDescending(x=>x.if_Id).ToListAsync();
             //实例化
             GetInquiryPageList data = new GetInquiryPageList();
             if (!string.IsNullOrEmpty(if_number))
@@ -87,18 +87,7 @@ namespace Flying_Cow_TMSAPI.Controllers
             {
                 data.Inquirie = list.Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
             }
-
-
-            //总页数
-            if (list.Count() % pageSize == 0)
-            {
-                data.TotalPage = list.Count() / pageSize;
-            }
-            else
-            {
-                data.TotalPage = list.Count() / pageSize + 1;
-            }
-
+            data.allPage = list.Count();
             return data;
         }
         /// <summary>

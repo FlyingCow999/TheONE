@@ -59,7 +59,7 @@ namespace Flying_Cow_TMSAPI.Controllers
                                   //预计到达时间
                                   if_PlanArrivalTime = i.if_PlanArrivalTime.ToString("yyyy-MM-dd HH:mm:ss"),
 
-                              }).ToListAsync();
+                              }).OrderByDescending(x=>x.if_Id).ToListAsync();
 
             //实例化
             GetTracePageList data = new GetTracePageList();
@@ -75,18 +75,7 @@ namespace Flying_Cow_TMSAPI.Controllers
             {
                 data.GetTraceModel = list.Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
             }
-
-
-            //总页数
-            if (list.Count() % pageSize == 0)
-            {
-                data.TotalPage = list.Count() / pageSize;
-            }
-            else
-            {
-                data.TotalPage = list.Count() / pageSize + 1;
-            }
-
+            data.allPage = list.Count();
             return data;
         }
         /// <summary>
