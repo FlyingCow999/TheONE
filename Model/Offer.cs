@@ -77,6 +77,9 @@ namespace Flying_Cow_TMSAPI.Model
         /// </summary>
         public float o_TotalPrice { get; set; }
         /// <summary>
+        /// 网点
+        /// </summary>
+        /// <summary>
         /// 货物表外键
         /// </summary>
         public int ciid { get; set; }

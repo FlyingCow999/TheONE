@@ -20,7 +20,7 @@ namespace Flying_Cow_TMSAPI.Model
         /// </summary>
         public int r_Id { get; set; }
         /// <summary>
-        /// 途中站
+        /// 途中站 
         /// </summary>
         public string r_Pass { get; set; }
         /// <summary>

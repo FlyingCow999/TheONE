@@ -16,7 +16,6 @@ namespace Flying_Cow_TMSAPI.Controllers
     [ApiController]
     public class AnomalyController : ControllerBase
     {
-
         //依赖注入
         public TMSDBContext db;
         public AnomalyController(TMSDBContext db) { this.db = db; }
@@ -26,7 +25,7 @@ namespace Flying_Cow_TMSAPI.Controllers
         //显示异常的界面
         [HttpGet]
         [Route("AbnormalList")]
-        public async Task<ActionResult<IEnumerable<AnomalyViewModel>>> AbnormalList(string ddh = "", string sb = "")
+        public AnomalyPage AbnormalList(string ddh = "", string sb = "", int pageIndex = 1, int pageSize = 5)
         {
             var list = from of in db.Offer
                        join i in db.Inquiry on of.ciid equals i.if_Id
@@ -92,7 +91,19 @@ namespace Flying_Cow_TMSAPI.Controllers
             {
                 list = list.Where(s => s.o_Driver.Equals(sb));
             }
-            return await list.ToListAsync();
+            int count = list.Count();
+            AnomalyPage page = new AnomalyPage();
+            list = list.Skip((pageIndex - 1) * pageSize).Take(pageSize);
+            page.avm = list.ToList();
+            if (count % pageSize == 0)
+            {
+                page.TotalPage = count / pageSize;
+            }
+            else
+            {
+                page.TotalPage = count / pageSize + 1;
+            }
+            return page;
         }
         #endregion
 

@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Flying_Cow_TMSAPI.Model
 {
-    public class InquiryViewModel
+    public class HDViewModel
     {
+        [Key]
         public int if_Id { get; set; }
         /// <summary>
         /// 询价号
@@ -15,15 +17,15 @@ namespace Flying_Cow_TMSAPI.Model
         /// <summary>
         /// 下单时间
         /// </summary>
-        public string if_OrderTime { get; set; }
+        public DateTime if_OrderTime { get; set; }
         /// <summary>
         /// 计划发车时间
         /// </summary>
-        public string if_PlanBCarTime { get; set; }
+        public DateTime if_PlanBCarTime { get; set; }
         /// <summary>
         /// 计划到达时间
         /// </summary>
-        public string if_PlanArrivalTime { get; set; }
+        public DateTime if_PlanArrivalTime { get; set; }
         /// <summary>
         /// 实际发车时间
         /// </summary>
@@ -64,7 +66,8 @@ namespace Flying_Cow_TMSAPI.Model
         /// 货名
         /// </summary>
         public string if_Goods { get; set; }
-        public int e_Id { get; set; }
+
+
         /// <summary>
         /// 委托方
         /// </summary>
@@ -93,6 +96,9 @@ namespace Flying_Cow_TMSAPI.Model
         /// 询价表外键
         /// </summary>
         public int ifid { get; set; }
+
+
+
         /// <summary>
         /// 收货方
         /// </summary>
@@ -114,19 +120,70 @@ namespace Flying_Cow_TMSAPI.Model
         /// </summary>
         public int eid { get; set; }
         /// <summary>
-        /// 订单状态   0：待接单      1：已接单       2：已完成  
+        /// 订单状态
         /// </summary>
         public int co_State { get; set; }
-        public string ZT { get; set; }
-        public int co_Id { get; set; }
-        public int quanbu { get; set; }
-        public int ybj { get; set; }
-        public int wbj { get; set; }
-        public int gq { get; set; }
-        public int y { get; set; }
-        public int jj { get; set; }
-        public int yjd { get; set; }
-        public int djjd { get; set; }
-        public int qb { get; set; }
+
+
+        /// <summary>
+        /// 异常状态
+        /// </summary>
+        public int a_Abnormal { get; set; }
+        /// <summary>
+        /// 异常说明
+        /// </summary>
+        public string a_Explain { get; set; }
+        /// <summary>
+        /// 签收人
+        /// </summary>
+        public string a_Signer { get; set; }
+        /// <summary>
+        /// 签收时间 
+        /// </summary>
+        public DateTime a_Signing { get; set; }
+        /// <summary>
+        /// 签收状态
+        /// </summary>
+        public int a_Status { get; set; }
+        /// <summary>
+        /// 图片
+        /// </summary>
+        public string a_Picture { get; set; }
+        /// <summary>
+        /// 备注
+        /// </summary>
+        public string a_Remarks { get; set; }
+        /// <summary>
+        /// 卸货外键
+        /// </summary>
+        public int receiptid { get; set; }
+        /// <summary>
+        /// 询价表外键
+        /// </summary>
+        public int coid { get; set; }
+        //商家确认状态
+        public int a_State { get; set; }
+
+
+        /// <summary>
+        /// 订单号
+        /// </summary>
+        public string r_Order { get; set; }
+        /// <summary>
+        /// 货名
+        /// </summary>
+        public string r_Article { get; set; }
+        /// <summary>
+        /// 规格型号
+        /// </summary>
+        public string r_Spec { get; set; }
+        /// <summary>
+        /// 数量
+        /// </summary>
+        public int r_Number { get; set; }
+        /// <summary>
+        /// 重量
+        /// </summary>
+        public int r_Weight { get; set; }
     }
 }

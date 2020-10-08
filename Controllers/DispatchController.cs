@@ -24,7 +24,7 @@ namespace Flying_Cow_TMSAPI.Controllers
         //显示由询价单转过来的订单
         [HttpGet]
         [Route("GetInquiryInfo")]
-        public async Task<ActionResult<IEnumerable<InquiryViewModel>>> GetInquiry(string ddh = "", string gs = "")
+        public InquiryPage GetInquiry(string ddh = "", string gs = "", int pageIndex = 1, int pageSize = 5)
         {
             var list = from i in db.Inquiry.OrderByDescending(s => s.if_OrderTime)
                        join e in db.Entrust on i.if_Id equals e.ifid
@@ -69,7 +69,19 @@ namespace Flying_Cow_TMSAPI.Controllers
             {
                 list = list.Where(s => s.e_Company.Contains(gs));
             }
-            return await list.ToListAsync();
+            int count = list.Count();
+            InquiryPage page = new InquiryPage();
+            list = list.Skip((pageIndex - 1) * pageSize).Take(pageSize);
+            page.ivm = list.ToList();
+            if (count % pageSize == 0)
+            {
+                page.TotalPage = count / pageSize;
+            }
+            else
+            {
+                page.TotalPage = count / pageSize + 1;
+            }
+            return page;
         }
         //调度显示(委托方+收货方+订单信息)
         [HttpGet]
@@ -78,7 +90,8 @@ namespace Flying_Cow_TMSAPI.Controllers
         {
             var list = from i in db.Inquiry
                        join e in db.Entrust on i.if_Id equals e.ifid
-                       join cs in db.Consignee on e.e_Id equals cs.eid where i.if_Id==code
+                       join cs in db.Consignee on e.e_Id equals cs.eid
+                       where i.if_Id == code
                        select new DispatchViewModel
                        {
                            e_AddPerson = e.e_AddPerson,

@@ -46,7 +46,7 @@ namespace Flying_Cow_TMSAPI
                 c.IncludeXmlComments(xmlPath, true);
             });
             services.AddDbContext<Model.TMSDBContext>(
-               options => options.UseSqlServer("Data Source=.;Initial Catalog=TMSDB;User Id=sa;Password=123;")
+               options => options.UseSqlServer("Data Source=10.3.158.51;Initial Catalog=TMSDB;User Id=sa;Password=123;")
                );
 
             services.AddControllers();

@@ -1,18 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Flying_Cow_TMSAPI.Model
 {
-    [Table("Inquiry")]
-    /// <summary>
-    /// 询价表
-    /// </summary>
-    public class Inquiry
+    public class XSviewModel
     {
         [Key]
         public int if_Id { get; set; }
@@ -45,8 +39,8 @@ namespace Flying_Cow_TMSAPI.Model
         /// </summary>
         public string if_EndPlace { get; set; }
         /// <summary>
-        /// 询价单状态   0、1、2、3   待报价    4:已报价     5:已拒绝
-        /// </summary> 
+        /// 状态
+        /// </summary>
         public int if_State { get; set; }
         /// <summary>
         /// 备注
@@ -72,7 +66,21 @@ namespace Flying_Cow_TMSAPI.Model
         /// 货名
         /// </summary>
         public string if_Goods { get; set; }
+
+        /// <summary>
+        /// 收货方
+        /// </summary>
+        public string co_Company { get; set; }
+
+        /// <summary>
+        /// 订单状态
+        /// </summary>
+        public int co_State { get; set; }
+        
+
+        /// <summary>
+        /// 运输费
+        /// </summary>
+        public float o_Freight { get; set; }
     }
-
 }
-
