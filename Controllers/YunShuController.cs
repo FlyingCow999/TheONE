@@ -262,13 +262,13 @@ namespace Flying_Cow_TMSAPI.Controllers
             return await list.ToListAsync();
         }
         // POST api/<AbnormalController>
-        [HttpPost]
-        [Route("Add")]
-        public async Task<ActionResult<int>> Post([FromBody] /*Takegoods*/ Receipt m)
-        {
-            db.Receipt.Add(m);
-            return await db.SaveChangesAsync();
-        }
+        //[HttpPost]
+        //[Route("Add")]
+        //public async Task<ActionResult<int>> Post([FromBody] /*Takegoods*/ Receipt m)
+        //{
+        //    db.Receipt.Add(m);
+        //    return await db.SaveChangesAsync();
+        //}
         //提货
         [HttpPost]
         [Route("Post")]
@@ -505,6 +505,52 @@ namespace Flying_Cow_TMSAPI.Controllers
         //    db.Takegoods.Add(m);
         //    return await db.SaveChangesAsync();
         //}
+        [HttpGet]
+        [Route("yjhwx")]
+        public async Task<ActionResult<IEnumerable<InquiryViewModel>>> Yjhw(string djgl)
+        {
+            var list = (from A in db.Inquiry
+                        join B in db.Entrust on A.if_Id equals B.e_Id
+                        join C in db.Consignee on B.e_Id equals C.eid
+                        where A.if_Number == djgl
+                        select new InquiryViewModel()
+                        {
+                            if_Number = A.if_Number,
+                            if_OrderTime = A.if_OrderTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                            e_Company = B.e_Company,
+                            if_PlanBCarTime = A.if_PlanBCarTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                            if_PlanArrivalTime = A.if_PlanArrivalTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                            if_BeginPlace = A.if_BeginPlace,
+                            if_EndPlace = A.if_EndPlace,
+                            if_Goods = A.if_Goods,
+                            if_AllWeight = A.if_AllWeight,
+                            if_State = A.if_State,
+                            ZT = A.if_State == 1 ? "已接单" : A.if_State == 2 ? "等待接单" : A.if_State == 3 ? "拒绝" : "过期",
+                            if_Id = A.if_Id,
+                            if_TotalPackage = A.if_TotalPackage,
+                            if_BCarTime = A.if_BCarTime,
+                            if_Num = A.if_Num,
+                            if_Remark = A.if_Remark,
+                            if_Specification = A.if_Specification,
+                            ifid = B.ifid,
+                            e_AddPerson = B.e_AddPerson,
+                            e_AddPhone = B.e_AddPhone,
+                            e_Address = B.e_Address,
+                            e_Person = B.e_Person,
+                            e_Phone = B.e_Phone,
+                            e_Id = B.e_Id,
+                            eid = C.eid,
+                            co_Address = C.co_Address,
+                            co_Company = C.co_Company,
+                            co_Id = C.co_Id,
+                            co_Person = C.co_Person,
+                            co_Phone = C.co_Phone,
+                            co_State = C.co_State
+                        });
+            return await list.ToListAsync();
+        }
+
+
         [HttpPost]
         [Route("Add")]
         public async Task<ActionResult<int>> Post1([FromBody] Receipt m)

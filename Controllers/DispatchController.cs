@@ -230,10 +230,17 @@ namespace Flying_Cow_TMSAPI.Controllers
         public async Task<ActionResult<int>> AddDispatch([FromBody] Dispatch m)
         {
             //db.Dispatch.Add(m);
+
             Dispatch a = new Dispatch();
             a.transportid = m.transportid;
+            a.orderid = m.orderid;
             a.dis_State = 1;
             db.Dispatch.Update(a);
+
+            //Consignee con = new Consignee();
+            //var list=db.Consignee.Where(s=>s.)
+
+
             return await db.SaveChangesAsync();
         }
         #endregion
