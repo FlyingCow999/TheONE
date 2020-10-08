@@ -505,5 +505,30 @@ namespace Flying_Cow_TMSAPI.Controllers
         //    db.Takegoods.Add(m);
         //    return await db.SaveChangesAsync();
         //}
+        [HttpPost]
+        [Route("Add")]
+        public async Task<ActionResult<int>> Post1([FromBody] Receipt m)
+        {
+            db.Receipt.Add(m);
+            return await db.SaveChangesAsync();
+        }
+
+        [HttpPost]
+        [Route("Abnormal")]
+        public async Task<ActionResult<int>> Post([FromBody] Abnormal m)
+        {
+            db.Abnormal.Add(m);
+            return await db.SaveChangesAsync();
+        }
+
+
+        [HttpPost]
+        [Route("AddR")]
+        public async Task<ActionResult<int>> Post([FromBody] Route m)
+        {
+            db.Route.Add(m);
+            return await db.SaveChangesAsync();
+        }
+
     }
 }
